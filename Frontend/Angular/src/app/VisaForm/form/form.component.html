@@ -1,0 +1,18 @@
+<section id="formNav" *ngIf="getStepNumber() == 1">
+  <app-national-id (stepEmitter)="changePage($event)"></app-national-id>
+</section>
+<section id="formNav" *ngIf="getStepNumber() == 2">
+  <app-personal-data (stepEmitter)="changePage($event)"></app-personal-data>
+</section>
+<section  id="formNav" *ngIf="getStepNumber() == 3">
+<app-passport-data (stepEmitter)="changePage($event)"></app-passport-data>
+</section>
+<section id="formNav" *ngIf="getStepNumber() == 4">
+  <app-visa-data (stepEmitter)="changePage($event)"></app-visa-data>
+</section>
+<section id="formNav" *ngIf="getStepNumber() == 5">
+  <app-visa-payment (stepEmitter)="changePage($event)"></app-visa-payment>
+</section>
+<section id="formNav" *ngIf="getStepNumber() == 6">
+<app-steps></app-steps>
+</section>
