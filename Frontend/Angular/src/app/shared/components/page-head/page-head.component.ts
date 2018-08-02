@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormComponent} from '../../../VisaForm/form/form.component';
+import {FormComponent} from '../../../VisaForm/components/form/form.component';
 
 @Component({
   selector: 'app-page-head',

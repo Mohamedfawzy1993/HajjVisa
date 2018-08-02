@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Router} from '@angular/router';
-import {PageNumbers} from '../../infrastructure/data/page-numbers.enum';
+import {PageNumbers} from '../../../infrastructure/data/page-numbers.enum';
 
 
 @Component({

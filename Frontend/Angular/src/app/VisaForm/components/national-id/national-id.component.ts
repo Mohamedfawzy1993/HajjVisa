@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {PageNumbers} from '../../infrastructure/data/page-numbers.enum';
+import {PageNumbers} from '../../../infrastructure/data/page-numbers.enum';
 
 @Component({
   selector: 'app-national-id',
@@ -9,10 +9,13 @@ import {PageNumbers} from '../../infrastructure/data/page-numbers.enum';
 export class NationalIDComponent implements OnInit {
   @Output() stepEmitter = new EventEmitter();
   pageNumber = PageNumbers;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
+
   onSubmit(number) {
     console.log('Invoked');
     this.stepEmitter.emit(number);

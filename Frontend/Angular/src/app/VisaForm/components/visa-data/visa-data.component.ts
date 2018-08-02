@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {PageNumbers} from '../../infrastructure/data/page-numbers.enum';
+import {PageNumbers} from '../../../infrastructure/data/page-numbers.enum';
 
 @Component({
   selector: 'app-visa-data',

@@ -1,6 +1,6 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
-import {FormComponent} from './VisaForm/form/form.component';
+import {FormComponent} from './VisaForm/components/form/form.component';
 
 const appRoutes: Routes = [
   {path: '', component: FormComponent}
