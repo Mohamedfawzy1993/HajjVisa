@@ -25,8 +25,9 @@ export class VisaSearchComponent implements OnInit {
     this.visaSearch.checkVisa(this.passportNumber, this.visaNumber).subscribe(
       success => {
         this.visaObj = success;
-        if (this.visaObj.passportPassportId != this.passportNumber)
+        if (this.visaObj == null || ( this.visaObj.passportPassportId != this.passportNumber))
           this.isFound = false;
+
         else
           this.isFound = true;
           this.isSearched = true;
@@ -35,10 +36,13 @@ export class VisaSearchComponent implements OnInit {
       ,
       fail =>  {
         console.log(fail);
+        this.isFound = false;
         this.isSearched = true;
       }
     );
   }
+
+
   sanitize(url:string){
     return this.sanitizer.bypassSecurityTrustUrl(url);
   }

@@ -24,6 +24,7 @@ export class VisaPaymentComponent implements OnInit {
   }
 
   onSubmit(number) {
+    this.getVisaFormDTO().visaData.visaStatus = 'Done';
     this.visaService.saveForm(this.getVisaFormDTO()).subscribe(
       success => {
         console.log(success);
