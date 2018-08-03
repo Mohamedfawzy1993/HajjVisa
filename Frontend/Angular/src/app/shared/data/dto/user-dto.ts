@@ -4,7 +4,7 @@ export class UserDTO {
   userLname;
   userMname;
   placeOfBirth;
-  OfBirth;
+  dateOfBirth;
   email;
   phoneNo;
   address;

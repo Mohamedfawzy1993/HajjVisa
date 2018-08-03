@@ -10,4 +10,5 @@ import java.util.List;
 public interface PassportEntityRepository extends CrudRepository<PassportEntity , Long> {
 
     public List<PassportEntity> getByPassportId(String passportID);
+    public PassportEntity getPassportEntityByPassportId(String passportID);
 }

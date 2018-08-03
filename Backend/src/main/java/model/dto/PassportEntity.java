@@ -1,17 +1,17 @@
 package model.dto;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
 @Table(name = "passport", schema = "hajjvisa", catalog = "")
 public class PassportEntity {
-    private String passportId;
-    private Date passportIssueDate;
-    private Date passportExpireDate;
-    private String passportType;
-    private Integer userUserId;
+    private String passportId ="";
+    private Date passportIssueDate = new Date();
+    private Date passportExpireDate = new Date();
+    private String passportType = "";
+    private Integer userUserId = 0;
 
     @Id
     @Column(name = "PASSPORT_ID", nullable = false, length = 50)

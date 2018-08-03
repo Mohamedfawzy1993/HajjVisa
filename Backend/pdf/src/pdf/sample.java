@@ -98,7 +98,7 @@ public class sample {
 	         //Saving the document
 	         PDPageContentStream contentStream = new PDPageContentStream(document, blankPage);
 	         //Begin the Content stream 
-	         PDImageXObject pdImage = PDImageXObject.createFromFile("\\2030.png",document);
+	         PDImageXObject pdImage = PDImageXObject.createFromFile("\\x2030.png",document);
 	         PDImageXObject pdImage4 = PDImageXObject.createFromFile("\\code128.gif",document);
 	         //PDImageXObject pdImage4 = PDImageXObject.createFromFile("C:\\Users\\hsr99\\Desktop\\hajj\\PdfBox_Examples\\TITLE.png",document);
 	         PDImageXObject pdImage2 = PDImageXObject.createFromFile("\\logo.png",document);

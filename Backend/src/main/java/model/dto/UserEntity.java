@@ -1,24 +1,24 @@
 package model.dto;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
 @Table(name = "user", schema = "hajjvisa", catalog = "")
 public class UserEntity {
-    private Integer userId;
-    private String userFname;
-    private String userLname;
-    private String userMname;
-    private String placeOfBirth;
-    private Date dateOfBirth;
-    private String email;
-    private String phoneNo;
-    private String address;
-    private String nationality;
-    private String job;
-    private int blackListed;
+    private Integer userId = 0 ;
+    private String userFname = "";
+    private String userLname = "";
+    private String userMname = "";
+    private String placeOfBirth = "";
+    private Date dateOfBirth = new Date();
+    private String email = "";
+    private String phoneNo = "";
+    private String address = "";
+    private String nationality = "";
+    private String job = "";
+    private int blackListed = 0;
 
     @Id
     @Column(name = "USER_ID", nullable = false)

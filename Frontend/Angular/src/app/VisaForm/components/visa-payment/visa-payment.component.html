@@ -7,20 +7,20 @@
       <label for="advancePaymentMethod" class="col-2 col-form-label">Payment Method</label>
       <div class="col-10">
       <select id="advancePaymentMethod" class="form-control">
-        <option>Paypal</option>
-        <option>Bank Account</option>
+        <option>Bank Transfer</option>
       </select>
       </div>
     </div>
     <div class="form-group row">
       <label for="paymentValue" class="col-2 col-form-label">Deposit Reference Number</label>
       <div class="col-10">
-        <input class="form-control" type="number" value="How do I shoot web" id="paymentValue">
+        <input [(ngModel)]="getVisaFormDTO().visaData.paymentNumber"
+               class="form-control" type="number" value="How do I shoot web" id="paymentValue">
       </div>
     </div>
     <hr/>
     <div class="btn-group pull-right" role="group" aria-label="Basic example">
       <a class="btn btn-info pull-right" (click)="onSubmit(pageNumber.VISAPAGE)">Previous</a>
-      <a class="btn btn-success pull-right" >Submit Visa Application</a>
+      <a class="btn btn-success pull-right" (click)="onSubmit(pageNumber.SUCCESS)" >Submit Visa Application</a>
     </div>
   </div>

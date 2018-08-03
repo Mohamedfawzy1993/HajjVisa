@@ -5,5 +5,6 @@ export enum PageNumbers {
   PASSPORTPAGE = 3,
   VISAPAGE = 4,
   VISAPAYMENT = 5,
-  STEPS = 6
+  STEPS = 6,
+  SUCCESS = 7
 }

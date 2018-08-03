@@ -1,21 +1,16 @@
 import {Injectable} from '@angular/core';
 import {VisaVTO} from '../data/visa-vto';
+import {VisaFormDTO} from '../../../shared/data/dto/visa-form-dto';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class VisaObjectService {
 
-  visaObj: VisaVTO;
+  visaObj: VisaFormDTO;
 
   constructor() {
   }
 
-  setVisaObj(visaObj: VisaVTO) {
-    this.visaObj = visaObj;
-  }
-
-  getVisaObj(): VisaVTO {
+  getVisaObj(): VisaFormDTO {
     return this.visaObj;
   }
 

@@ -4,7 +4,7 @@ import {UserDTO} from './user-dto';
 
 export class VisaFormDTO {
 
-  visaData: VisaDTO;
-  passportData: PassportDTO;
-  userData: UserDTO;
+  visaData: VisaDTO = new VisaDTO();
+  passportData: PassportDTO = new PassportDTO();
+  userData: UserDTO = new UserDTO();
 }

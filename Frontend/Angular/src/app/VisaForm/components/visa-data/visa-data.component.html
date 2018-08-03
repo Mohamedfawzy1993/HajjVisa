@@ -4,23 +4,24 @@
       </h1>
       <hr/>
       <div class="form-group row">
-        <label for="passport_no" class="col-2 col-form-label">Visa Type</label>
+        <label for="visa_type" class="col-2 col-form-label">Visa Type</label>
         <div class="col-10">
-        <select class="form-control" id="passport_no">
+        <select [(ngModel)]="getVisaFormDTO().visaData.visaType" class="form-control" id="visa_type">
           <option>Hajj</option>
+          <option>Umrah</option>
         </select>
         </div>
       </div>
       <div class="form-group row">
         <label for="visa_Issue_date" class="col-2 col-form-label">Arrival Date</label>
         <div class="col-10">
-          <input class="form-control" type="date" id="visa_Issue_date"/>
+          <input [(ngModel)]="getVisaFormDTO().visaData.issueDate" class="form-control" type="date" id="visa_Issue_date"/>
         </div>
       </div>
       <div class="form-group row">
         <label for="visa_Duration" class="col-2 col-form-label">Visa Duration</label>
         <div class="col-10">
-          <input class="form-control" type="number" id="visa_Duration"/>
+          <input [(ngModel)]="getVisaFormDTO().visaData.durationOfStay" class="form-control" type="number" id="visa_Duration"/>
         </div>
       </div>
       <hr/>

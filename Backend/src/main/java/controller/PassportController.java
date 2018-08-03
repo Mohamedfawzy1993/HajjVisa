@@ -9,19 +9,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/passport")
 public class PassportController {
 
     @Autowired
     public PassportService userPassportService;
 
-    @GetMapping(path = "/**")
+    @GetMapping(path = "/passport/**")
     public @ResponseBody
     List<PassportEntity> getPassports() {
         return this.userPassportService.getAllPassports();
     }
 
-    @PostMapping(path = "/**", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/passport/**", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody
     String addUser(@RequestBody PassportEntity passportEntity) {
         try {

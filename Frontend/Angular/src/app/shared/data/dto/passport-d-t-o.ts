@@ -1,7 +1,7 @@
 export class PassportDTO {
     passportId;
-    passportIssue;
-    passportExpire;
+    passportIssueDate;
+    passportExpireDate;
     passportType;
     userUserId;
 }

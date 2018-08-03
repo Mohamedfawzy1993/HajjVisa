@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {PageNumbers} from '../../../infrastructure/data/page-numbers.enum';
+import {FormComponent} from '../form/form.component';
 
 @Component({
   selector: 'app-visa-data',
@@ -17,5 +18,9 @@ export class VisaDataComponent implements OnInit {
   onSubmit(number) {
     console.log('Invoked');
     this.stepEmitter.emit(number);
+  }
+  getVisaFormDTO() {
+    return FormComponent.visaFormDTO;
+
   }
 }

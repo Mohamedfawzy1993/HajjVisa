@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {VisaFormDTO} from '../../../shared/data/dto/visa-form-dto';
 
 @Component({
   selector: 'app-form',
@@ -8,7 +9,7 @@ import {Component, OnInit} from '@angular/core';
 export class FormComponent implements OnInit {
 
   static stepNumber: number = 6;
-
+  static visaFormDTO: VisaFormDTO = new VisaFormDTO();
   ngOnInit(): void {
   }
 

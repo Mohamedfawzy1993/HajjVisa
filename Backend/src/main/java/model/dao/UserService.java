@@ -21,7 +21,11 @@ public class UserService {
     }
 
 
-    public void insertUser(UserEntity userEntity) {
-        this.userEntityRepository.save(userEntity);
+    public UserEntity insertUser(UserEntity userEntity) {
+        return this.userEntityRepository.save(userEntity);
+    }
+
+    public UserEntity getUserEntityByUserId(String userID) {
+       return this.userEntityRepository.getUserEntityByUserId(userID);
     }
 }

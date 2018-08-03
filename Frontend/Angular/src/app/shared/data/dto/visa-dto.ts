@@ -1,3 +1,5 @@
+import {UserDTO} from './user-dto';
+
 export class VisaDTO {
 
   visaId: number;
@@ -11,7 +13,10 @@ export class VisaDTO {
   companion: number;
   workPermit: number;
   visaOfficer: string;
-  visaStatus: string;
+  visaStatus: string = 'Pending';
   passportPassportId: string;
   agencyNumber: string;
+  paymentNumber: string;
+  visaURL: String;
+  user: UserDTO;
 }

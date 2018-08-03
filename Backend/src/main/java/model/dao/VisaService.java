@@ -16,11 +16,26 @@ public class VisaService {
         this.visaEntityRepository = visaEntityRepository;
     }
 
-    public void insertVisa(VisaEntity visaEntity) {
-        this.visaEntityRepository.save(visaEntity);
+    public VisaEntity insertVisa(VisaEntity visaEntity) {
+        return this.visaEntityRepository.save(visaEntity);
     }
 
     public List<VisaEntity> findAll() {
         return (List<VisaEntity>) this.visaEntityRepository.findAll();
     }
+
+
+    public VisaEntity findbyVisaIDAndPassportID(int visaID) {
+        return this.visaEntityRepository.getAllByVisaId(visaID);
+    }
+
+    public VisaEntity updateVisa(VisaEntity visaEntity) {
+        return this.visaEntityRepository.save(visaEntity);
+    }
+
+    public List<VisaEntity> getAllPending()
+    {
+        return this.visaEntityRepository.findAllByVisaStatus("Pending");
+    }
 }
+

@@ -16,11 +16,16 @@ public class PassportService {
         this.passportEntityRepository = passportEntityRepository;
     }
 
-    public void insertPassport(PassportEntity passportEntity) {
-        this.passportEntityRepository.save(passportEntity);
+    public PassportEntity insertPassport(PassportEntity passportEntity) {
+        return this.passportEntityRepository.save(passportEntity);
     }
     public List<PassportEntity> getAllPassports()
     {
         return (List<PassportEntity>)this.passportEntityRepository.findAll();
     }
+
+    public PassportEntity getPassportEntityByPassportId(String passportID) {
+      return this.passportEntityRepository.getPassportEntityByPassportId(passportID);
+    }
+
 }

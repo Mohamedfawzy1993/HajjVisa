@@ -10,4 +10,5 @@ import java.util.List;
 public interface UserEntityRepository extends CrudRepository<UserEntity, Long> {
 
     public List<UserEntity> getAllByUserFname(String fname);
+    public UserEntity getUserEntityByUserId(String userID);
 }

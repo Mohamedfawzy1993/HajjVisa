@@ -6,26 +6,29 @@
     <div class="form-group row">
       <label for="user_fname" class="col-2 col-form-label">First Name</label>
       <div class="col-10">
-        <input class="form-control" type="text" value="Artisanal kale" id="user_fname">
+        <input [(ngModel)]="getVisaFormDTO().userData.userFname" class="form-control" type="text"  id="user_fname">
       </div>
     </div>
     <div class="form-group row">
       <label for="user_mname" class="col-2 col-form-label">Middle Name</label>
       <div class="col-10">
-        <input class="form-control" type="search" value="How do I shoot web" id="user_mname">
+        <input [(ngModel)]="getVisaFormDTO().userData.userMname" class="form-control" type="search"  id="user_mname">
       </div>
     </div>
     <div class="form-group row">
       <label for="user_lname" class="col-2 col-form-label">Last Name</label>
       <div class="col-10">
-        <input class="form-control" type="search" value="How do I shoot web" id="user_lname">
+        <input [(ngModel)]="getVisaFormDTO().userData.userLname"
+               class="form-control" type="search" id="user_lname">
       </div>
     </div>
     <div class="form-group row">
       <label for="nationality" class="col-2 col-form-label">Nationality</label>
       <div class="col-10">
-      <select class="form-control" id="nationality">
+      <select [(ngModel)]="getVisaFormDTO().userData.nationality" class="form-control" id="nationality">
         <option>Egypt</option>
+        <option>KSA</option>
+        <option>USA</option>
       </select>
       </div>
     </div>
@@ -33,39 +36,43 @@
     <div class="form-group row">
     <label for="place_of_birth" class="col-2 col-form-label">Place of Birth</label>
     <div class="col-10">
-      <input class="form-control" type="search" value="How do I shoot web" id="place_of_birth">
+      <input [(ngModel)]="getVisaFormDTO().userData.placeOfBirth"
+             class="form-control" type="search"  id="place_of_birth">
     </div>
   </div>
     <div class="form-group row">
       <label for="date_of_birth" class="col-2 col-form-label">Date of Birth</label>
       <div class="col-10">
-        <input type="date" class="form-control" type="search" value="How do I shoot web" id="date_of_birth">
+        <input [(ngModel)]="getVisaFormDTO().userData.dateOfBirth"
+               type="date" class="form-control" id="date_of_birth">
       </div>
     </div>
     <hr/>
     <div class="form-group row">
       <label for="email" class="col-2 col-form-label">Email</label>
       <div class="col-10">
-        <input class="form-control" type="email" value="How do I shoot web" id="email">
+        <input [(ngModel)]="getVisaFormDTO().userData.email"
+               class="form-control" type="email" id="email">
       </div>
     </div>
     <div class="form-group row">
       <label for="phone" class="col-2 col-form-label">Phone</label>
       <div class="col-10">
-        <input class="form-control" type="number" value="How do I shoot web" id="phone">
+        <input [(ngModel)]="getVisaFormDTO().userData.phoneNo"
+               class="form-control" type="number"  id="phone">
       </div>
     </div>
 
     <div class="form-group row">
       <label for="job" class="col-2 col-form-label">Job</label>
       <div class="col-10">
-        <input type="date" class="form-control" type="search" value="How do I shoot web" id="job">
+        <input [(ngModel)]="getVisaFormDTO().userData.job" type="text" class="form-control" type="search" id="job">
       </div>
     </div>
     <div class="form-group row">
     <label for="address" class="col-2 col-form-label">Address</label>
     <div class="  col-10">
-      <textarea id="address" rows="4" cols="50" class="form-control"></textarea>
+      <textarea [(ngModel)]="getVisaFormDTO().userData.address" id="address" rows="4" cols="50" class="form-control"></textarea>
     </div>
   </div>
 

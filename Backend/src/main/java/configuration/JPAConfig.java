@@ -6,17 +6,20 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.sql.DataSource;
 import javax.xml.crypto.Data;
+import java.io.File;
 
 @Configuration
 @EnableJpaRepositories(value = "model.dao",
         entityManagerFactoryRef = "entityManagerBean")
 @EnableTransactionManagement
-public class JPAConfig {
+public class JPAConfig extends WebMvcConfigurerAdapter {
 
     public EntityManagerFactory entityManagerBean() {
         LocalContainerEntityManagerFactoryBean localEntityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();

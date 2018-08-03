@@ -2,7 +2,7 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { VisaFormService } from './visa-form.service';
 
-describe('VisaFormService', () => {
+describe('AdminService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [VisaFormService]

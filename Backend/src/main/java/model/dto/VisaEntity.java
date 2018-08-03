@@ -1,28 +1,32 @@
 package model.dto;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
 @Table(name = "visa", schema = "hajjvisa", catalog = "")
 public class VisaEntity {
-    private Integer visaId;
-    private String visaType;
-    private Integer validity;
-    private Date issueDate;
-    private Integer durationOfStay;
-    private String issueOffice;
-    private String fees;
-    private Integer numberOfEntries;
-    private Integer companion;
-    private Byte workPermit;
-    private String visaOfficer;
-    private String visaStatus;
-    private String passportPassportId;
-    private String agencyNumber;
+    private Integer visaId = 0;
+    private String visaType = "";
+    private Integer validity = 1;
+    private Date issueDate = new Date();
+    private Integer durationOfStay = 1;
+    private String issueOffice = "";
+    private String fees = "";
+    private Integer numberOfEntries = 1;
+    private Integer companion = 1;
+    private Byte workPermit = 1;
+    private String visaOfficer = "";
+    private String visaStatus = "";
+    private String passportPassportId = "";
+    private String agencyNumber = "";
+    private String paymentNumber = "";
+    private String visaURL = "";
+
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "VISA_ID", nullable = false)
     public Integer getVisaId() {
         return visaId;
@@ -186,5 +190,25 @@ public class VisaEntity {
 
     public void setAgencyNumber(String agencyNumber) {
         this.agencyNumber = agencyNumber;
+    }
+
+    @Basic
+    @Column(name = "PAYMENT_NUMBER", nullable = false, length = 50)
+    public String getPaymentNumber() {
+        return paymentNumber;
+    }
+
+    public void setPaymentNumber(String paymentNumber) {
+        this.paymentNumber = paymentNumber;
+    }
+
+    @Basic
+    @Column(name="VISA_URL" , nullable = true , length = 1000)
+    public String getVisaURL() {
+        return visaURL;
+    }
+
+    public void setVisaURL(String visaURL) {
+        this.visaURL = visaURL;
     }
 }
